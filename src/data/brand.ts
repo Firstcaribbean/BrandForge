@@ -15,4 +15,25 @@ export const palettes:Palette[] = [
 ];
 export const industries=["Technology","Food","Fashion","Health","Education","Finance","Agriculture","Photography","Beauty","Construction","Church / NGO","Real Estate","Legal","Travel","Retail","Nonprofit","Other"];
 export const fontOptions=["DM Sans","Playfair Display","Space Grotesk","Lora","Montserrat","Raleway","Oswald","Merriweather","Poppins","Nunito Sans","Roboto Mono","Cormorant Garamond","Abril Fatface","Dancing Script","Outfit"];
+export const fontPairs=[
+ {display:"Space Grotesk",tagline:"DM Sans",category:"geometric sans"},{display:"Playfair Display",tagline:"Montserrat",category:"editorial serif"},{display:"Oswald",tagline:"Roboto Mono",category:"condensed display"},{display:"Poppins",tagline:"Nunito Sans",category:"rounded sans"},{display:"Abril Fatface",tagline:"DM Sans",category:"display serif"},{display:"Cormorant Garamond",tagline:"Raleway",category:"elegant serif"},{display:"Merriweather",tagline:"Roboto Mono",category:"slab serif"},{display:"Dancing Script",tagline:"Montserrat",category:"script"},{display:"Roboto Mono",tagline:"DM Sans",category:"monospace"},{display:"Outfit",tagline:"Lora",category:"modern mix"},{display:"Lora",tagline:"Space Grotesk",category:"classic serif"},{display:"Raleway",tagline:"Merriweather",category:"light geometric"},{display:"Montserrat",tagline:"Cormorant Garamond",category:"fashion pairing"},{display:"Nunito Sans",tagline:"Oswald",category:"rounded pairing"},{display:"DM Sans",tagline:"Playfair Display",category:"quiet contrast"}];
+export const industryIconMap:Record<string,string[]>={
+ "Technology":["chip","circuit","code","cloud","shield","pixels","network","bolt","brackets","nodes"],
+ "Food":["flame","leaf","wheat","chef-hat","apple","coffee","citrus","fork","bread","sprout"],
+ "Fashion":["needle","diamond","thread","hanger","crown","sparkles","flower","ribbon"],
+ "Health":["cross","heart","plus","pulse","shield","leaf","sun","care"],
+ "Education":["book","cap","bulb","pencil","atom","globe","star","abc"],
+ "Finance":["bar-chart","coins","vault","shield","growth","columns","arrow-up","balance"],
+ "Agriculture":["leaf","wheat","sprout","sun","tractor","barn","seed","mountain"],
+ "Photography":["camera","aperture","focus","shutter","frame","sun","lens","sparkles"],
+ "Beauty":["flower","mirror","sparkles","drop","comb","crown","butterfly","petal"],
+ "Construction":["building","crane","hammer","blueprint","brick","helmet","ruler","bridge"],
+ "Church / NGO":["cross","hands","dove","heart","globe","sun","people","hope"],
+ "Real Estate":["building","home","key","roof","door","city","pin","columns"],
+ "Legal":["scales","gavel","shield","column","book","seal","justice","laurel"],
+ "Travel":["globe","compass","plane","mountain","sun","pin","wave","suitcase"],
+ "Retail":["bag","tag","star","box","shop","sparkles","basket","arrow"],
+ "Nonprofit":["hands","heart","globe","people","dove","leaf","sun","ribbon"],
+ "Other":["sparkles","circle","flower","mountain","sun","bolt","heart","globe"]
+};
 export const fontCss:Record<string,string>={"DM Sans":"var(--font-dm)","Playfair Display":"var(--font-playfair)","Space Grotesk":"var(--font-space)",Lora:"var(--font-lora)",Montserrat:"var(--font-mont)",Raleway:"var(--font-raleway)",Oswald:"var(--font-oswald)",Merriweather:"var(--font-merry)",Poppins:"var(--font-poppins)","Nunito Sans":"var(--font-nunito)","Roboto Mono":"var(--font-mono)","Cormorant Garamond":"var(--font-cormorant)","Abril Fatface":"var(--font-abril)","Dancing Script":"var(--font-dancing)",Outfit:"var(--font-outfit)"};
