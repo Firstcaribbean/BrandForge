@@ -1,0 +1,5 @@
+import {create} from "zustand";
+import {persist,createJSONStorage} from "zustand/middleware";
+import {defaultBrand,type Brand} from "@/data/types";
+type State={brand:Brand;history:Brand[];future:Brand[];set:(patch:Partial<Brand>)=>void;replace:(b:Brand)=>void;undo:()=>void;redo:()=>void;reset:()=>void};
+export const useBrandStore=create<State>()(persist((set,get)=>({brand:defaultBrand,history:[],future:[],set:(patch)=>{const b=get().brand;set({history:[...get().history.slice(-29),b],future:[],brand:{...b,...patch}})},replace:(brand)=>set({history:[...get().history.slice(-29),get().brand],future:[],brand}),undo:()=>{const h=get().history;if(!h.length)return;set({brand:h[h.length-1],history:h.slice(0,-1),future:[get().brand,...get().future]})},redo:()=>{const f=get().future;if(!f.length)return;set({brand:f[0],history:[...get().history,get().brand],future:f.slice(1)})},reset:()=>set({brand:defaultBrand,history:[],future:[]})}),{name:"brandforge-v1",storage:createJSONStorage(()=>localStorage)}));

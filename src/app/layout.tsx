@@ -1,0 +1,20 @@
+import type { Metadata } from "next";
+import { DM_Sans, Playfair_Display, Space_Grotesk, Lora, Montserrat, Raleway, Oswald, Merriweather, Poppins, Nunito_Sans, Roboto_Mono, Cormorant_Garamond, Abril_Fatface, Dancing_Script, Outfit } from "next/font/google";
+import "./globals.css";
+const dm = DM_Sans({subsets:["latin"],variable:"--font-dm"});
+const playfair = Playfair_Display({subsets:["latin"],variable:"--font-playfair"});
+const space = Space_Grotesk({subsets:["latin"],variable:"--font-space"});
+const lora = Lora({subsets:["latin"],variable:"--font-lora"});
+const mont = Montserrat({subsets:["latin"],variable:"--font-mont"});
+const raleway = Raleway({subsets:["latin"],variable:"--font-raleway"});
+const oswald = Oswald({subsets:["latin"],variable:"--font-oswald"});
+const merry = Merriweather({subsets:["latin"],variable:"--font-merry"});
+const poppins = Poppins({subsets:["latin"],weight:["400","500","600","700"],variable:"--font-poppins"});
+const nunito = Nunito_Sans({subsets:["latin"],variable:"--font-nunito"});
+const mono = Roboto_Mono({subsets:["latin"],variable:"--font-mono"});
+const cormorant = Cormorant_Garamond({subsets:["latin"],weight:["400","500","600","700"],variable:"--font-cormorant"});
+const abril = Abril_Fatface({subsets:["latin"],weight:"400",variable:"--font-abril"});
+const dancing = Dancing_Script({subsets:["latin"],weight:["400","500","600","700"],variable:"--font-dancing"});
+const outfit = Outfit({subsets:["latin"],variable:"--font-outfit"});
+export const metadata: Metadata = { title:"BrandForge — Make your brand, yours", description:"Create a logo and letterhead that feel unmistakably you. No design experience needed.", openGraph:{title:"BrandForge — Make your brand, yours",description:"Your brand starts here."}, icons:{icon:"/favicon.svg"} };
+export default function RootLayout({children}:{children:React.ReactNode}) { return <html lang="en"><body className={`${dm.variable} ${playfair.variable} ${space.variable} ${lora.variable} ${mont.variable} ${raleway.variable} ${oswald.variable} ${merry.variable} ${poppins.variable} ${nunito.variable} ${mono.variable} ${cormorant.variable} ${abril.variable} ${dancing.variable} ${outfit.variable}`}>{children}</body></html>; }
